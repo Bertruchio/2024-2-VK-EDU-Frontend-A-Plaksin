@@ -18,7 +18,7 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  if (typeof bytes !== 'number' || bytes < 0) {
+  if (typeof bytes !== 'number' || bytes < 0 || !isFinite(bytes)) {
     return false;
   }
 
@@ -30,7 +30,7 @@ export default function convertBytesToHuman(bytes) {
     index++;
   }
 
-  const result = bytes.toFixed(2).replace(/\.?0+$/, '');
+  const result = parseFloat(bytes.toFixed(2));
 
   return `${result} ${units[index]}`;
 }

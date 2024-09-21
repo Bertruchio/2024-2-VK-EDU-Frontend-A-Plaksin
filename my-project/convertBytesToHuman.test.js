@@ -11,6 +11,9 @@ import convertBytesToHuman from './convertBytesToHuman';
 
 test('Возвращает false для неправильного типа данных', () => {
   expect(convertBytesToHuman(-1)).toBe(false);         // Отрицательное число
+  expect(convertBytesToHuman(NaN)).toBe(false);         // NaN
+  expect(convertBytesToHuman(Infinity)).toBe(false);    // Infinity
+  expect(convertBytesToHuman(-Infinity)).toBe(false);   // -Infinity
   expect(convertBytesToHuman('string')).toBe(false);   // Строка
   expect(convertBytesToHuman(undefined)).toBe(false);  // undefined
   expect(convertBytesToHuman(null)).toBe(false);       // null

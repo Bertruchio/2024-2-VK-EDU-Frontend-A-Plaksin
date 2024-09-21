@@ -30,7 +30,7 @@ export default function convertBytesToHuman(bytes) {
     index++;
   }
 
-  const result = parseFloat(bytes.toFixed(2));
+  const result = +bytes.toFixed(2);
 
   return `${result} ${units[index]}`;
 }

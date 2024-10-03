@@ -115,7 +115,7 @@ html, body {
     font-size: 12px;
     font-weight: 100;
     color: rgba(0, 0, 0, 0.87);
-    align-self: flex-end; /* Выровнять время по правому краю */    
+    align-self: flex-end;   
 }
 
 .chat__message--received {
@@ -135,18 +135,18 @@ html, body {
 }
 
 .chat__message-photo {
-    position: relative; /* Делаем этот контейнер относительным для абсолютного позиционирования времени */
-    height: auto; /* Высота автоматически подстраивается под контент */
-    overflow: hidden; /* Скрыть переполнение, если необходимо */
+    position: relative;
+    height: auto;
+    overflow: hidden;
     max-width: 640px;
     max-height: 640px;
 }
 
 .chat__message-photo img {
-    max-width: 100%; /* Обеспечить адаптивность изображения */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем пробелы под изображением */
-    border-radius: 8px; /* Закругленные углы изображения */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .chat__message-photo .chat__message-time {
@@ -166,7 +166,7 @@ html, body {
 
 .chat__message-form {
     display: flex;
-    align-items: center; /* Центрируем по вертикали */
+    align-items: center;
     background-color: #ffffff;
     padding: 8px;
     border-top: 1px solid #ccc;

@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageElement.appendChild(messageTimeElement);
 
         chatWindow.appendChild(messageElement);
-        chatWindow.scrollTop = chatWindow.scrollHeight; // Прокручиваем вниз
+        chatWindow.scrollTop = chatWindow.scrollHeight;
     }
 
     function loadMessages() {
@@ -127,6 +127,5 @@ document.addEventListener('DOMContentLoaded', () => {
         messages.forEach(message => addMessageToChat(message));
     }
 
-    // Загрузка сообщений при первой загрузке
     loadMessages();
 });

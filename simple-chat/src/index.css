@@ -25,12 +25,17 @@ html, body {
 .chat__back-button,
 .chat__search-button,
 .chat__menu-options {
-    width: 32px;
-    height: 32px;
+    background-color: transparent;
+    width: 42px;
+    height: 42px;
+    border: none;
+    cursor: pointer;
     margin-right: 8px;
 }
 
 .chat__user-icon {
+    border: none;
+    cursor: pointer;
     width: 42px; 
     height: 42px;
     border-radius: 50%;

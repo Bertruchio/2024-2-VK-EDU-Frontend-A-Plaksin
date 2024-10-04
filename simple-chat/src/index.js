@@ -1,6 +1,6 @@
 import './index.css';
 
-mocks = `
+const mocks = `
         <div class="chat__message chat__message--received">
             <p class="chat__message-text">Я тут кое-что нарисовала. Посмотри как будет время.</p>
             <div class="chat__message-time">

@@ -6,17 +6,17 @@ const mocks = `
             <div class="chat__message-time">
                 10:53
                 <div class="chat__message-status">
-                    <img src="src/images/check-icon.svg" alt="checked" class="chat__message-status">
+                    <img src="images/check-icon.svg" alt="checked" class="chat__message-status">
                 </div>
             </div>
         </div>
         <div class="chat__message chat__message--image">
             <div class="chat__message-photo">
-                <img src="src/images/j-drawing.jpg" alt="Image message">
+                <img src="images/j-drawing.jpg" alt="Image message">
                 <div class="chat__message-time">
                     10:53
                     <div class="chat__message-status">
-                        <img src="src/images/check-icon.svg" alt="checked" class="chat__message-status">
+                        <img src="images/check-icon.svg" alt="checked" class="chat__message-status">
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ const mocks = `
             <div class="chat__message-time">
                 10:53
                 <div class="chat__message-status">
-                    <img src="src/images/check-icon.svg" alt="checked" class="chat__message-status">
+                    <img src="images/check-icon.svg" alt="checked" class="chat__message-status">
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ const mocks = `
             <div class="chat__message-time">
                 10:53
                 <div class="chat__message-status">
-                    <img src="src/images/check-icon.svg" alt="checked" class="chat__message-status">
+                    <img src="images/check-icon.svg" alt="checked" class="chat__message-status">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@ const mocks = `
             <div class="chat__message-time">
                 10:53
                 <div class="chat__message-status">
-                    <img src="src/images/check-icon.svg" alt="checked" class="chat__message-status">
+                    <img src="images/check-icon.svg" alt="checked" class="chat__message-status">
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageStatusElement = document.createElement('div');
         messageStatusElement.classList.add('chat__message-status');
         const statusIcon = document.createElement('img');
-        statusIcon.src = 'src/images/check-icon.svg';
+        statusIcon.src = 'images/check-icon.svg';
         statusIcon.alt = 'checked';
         statusIcon.classList.add('chat__message-status');
         messageStatusElement.appendChild(statusIcon);

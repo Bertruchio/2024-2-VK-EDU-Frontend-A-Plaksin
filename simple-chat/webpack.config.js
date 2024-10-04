@@ -4,7 +4,7 @@ const path = require('path');
 
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const SRC_PATH = path.resolve(__dirname, 'src');
 const BUILD_PATH = path.resolve(__dirname, 'build');
@@ -54,19 +54,6 @@ module.exports = {
                     },
                 ],
             },
-            {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            outputPath: 'images',
-                            publicPath: 'images',
-                        },
-                    },
-                ],
-            }
         ],
     },
     plugins: [
@@ -76,6 +63,15 @@ module.exports = {
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: './index.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(SRC_PATH, 'images'), // Указываем источник
+                    to: path.resolve(BUILD_PATH, 'images'), // Указываем цель
+                    noErrorOnMissing: true // Не выдавать ошибку, если нет файлов
+                }
+            ]
         })
     ]
 };

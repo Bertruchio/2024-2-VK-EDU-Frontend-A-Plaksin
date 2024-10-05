@@ -67,9 +67,9 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(SRC_PATH, 'images'), // Указываем источник
-                    to: path.resolve(BUILD_PATH, 'images'), // Указываем цель
-                    noErrorOnMissing: true // Не выдавать ошибку, если нет файлов
+                    from: path.resolve(SRC_PATH, 'images'),
+                    to: path.resolve(BUILD_PATH, 'images'),
+                    noErrorOnMissing: true
                 }
             ]
         })

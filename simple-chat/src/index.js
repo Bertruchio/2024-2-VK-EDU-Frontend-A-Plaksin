@@ -10,7 +10,7 @@ const mocks = `
                 </div>
             </div>
         </div>
-        <div class="chat__message chat__message--image">
+        <div class="chat__message--image chat__message--received">
             <div class="chat__message-photo">
                 <img src="images/j-drawing.jpg" alt="Image message">
                 <div class="chat__message-time">

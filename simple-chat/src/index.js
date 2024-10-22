@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.querySelector('.chat__form-input');
     const chatWindow = document.querySelector('.chat__window');
 
-    // Проверка наличия элементов
     if (!form || !input || !chatWindow) {
         console.error("Не удалось найти необходимые элементы!");
         return;
@@ -117,15 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadMessages() {
         const messages = JSON.parse(localStorage.getItem('messages')) || [];
-        
-        // Удаляем все сообщения перед загрузкой
+
         chatWindow.innerHTML = ''; 
 
         const template = document.createElement('template');
         template.innerHTML = mocks.trim();
         chatWindow.appendChild(template.content);
-        
-        // Загружаем сообщения при первой загрузке
+
         messages.forEach(message => addMessageToChat(message));
     }
 
